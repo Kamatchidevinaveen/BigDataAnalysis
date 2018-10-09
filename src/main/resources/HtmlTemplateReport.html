@@ -1,0 +1,69 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>TF IDF Report</title>
+<style>
+table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+table#tfidfSummary {
+	width: unset;
+}
+
+td, th {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
+}
+
+tr:nth-child(even) {
+	background-color: #dddddd;
+}
+
+hr {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+</style>
+<script language="javascript"> 
+			function toggle() {
+				var ele = document.getElementById("tablesDiv");
+				var show = document.getElementById("displayText");
+				if(ele.style.display == "block") {
+					ele.style.display = "none";
+					show.innerHTML = "show TF-IDF tables";
+			  	} else {
+					ele.style.display = "block";
+					show.innerHTML = "hide TF-IDF tables";
+				}
+			} 
+		</script>
+</head>
+<body>
+	<div id="summary" style="margin-top: 30px; margin-bottom: 30px">
+		<div id="netSummary" style="margin-top: 10px; margin-bottom: 10px">
+			$grossSummary</div>
+		<table id="tfidfSummary" border="1" bordercolor="#000000">
+			<tr>
+				<th>Extension</th>
+				<th>Number of processed documents</th>
+			</tr>
+			$summaryBody
+		</table>
+		<h4>List of top 5 Popular words</h4>
+		<table id="popularWords" border="1" bordercolor="#000000">
+			<tr>
+				<th>Words</th>
+				<th>TF-IDF Score</th>
+			</tr>
+			$popularWordsBody
+		</table>
+	</div>
+	<a id="displayText" href="javascript:toggle();"
+		style="margin-bottom: 20px;">show TF-IDF tables</a>
+	<div id="tablesDiv" style="display: none;">$body</div>
+</body>
+</html>

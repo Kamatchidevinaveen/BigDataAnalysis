@@ -1,0 +1,45 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>TF - IDF Text Similarity Summary</title>
+<style>
+table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+table#textSimilarityResult {
+	width: unset;
+}
+
+td, th {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
+}
+
+tr:nth-child(even) {
+	background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+	<div id="summary" style="margin-top: 30px; margin-bottom: 30px">
+		<div id="query" style="margin-top: 10px; margin-bottom: 10px">
+			<h3>Query</h3>
+			<pre>$query</pre>
+		</div>
+		<div id="hadoopPath" style="margin-top: 10px; margin-bottom: 10px">
+			<h3>Hadoop Path</h3>
+			<pre>$hadoopPath</pre>
+		</div>
+		<table id="textSimilarityResult" border="1" bordercolor="#000000">
+			<tr>
+				<th>Matched Files</th>
+			</tr>
+			$resultTable
+		</table>
+	</div>
+</body>
+</html>
